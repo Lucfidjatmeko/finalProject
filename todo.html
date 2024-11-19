@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucfi Web Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style2.css">
+<!-- <style>
+   .carousel-item img {
+        height: 120px;  
+        object-fit: cover; 
+        width: 100%;  
+    }
+</style> -->
+    
+  </head>
+  <body onload="displayTodo()">
+  
+    <nav id="scrolling_navbar" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Lucfi Web Design</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav fw-bold">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html/">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Our Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#./index.html">Contact</a>          
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Maps</a>          
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./todo.html">Todos</a>
+              </li>
+ 
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <!-- nav bar enD  -->   
+
+
+
+
+
+<!-- todo ############# here  -->
+
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+                    <div class="card-body py-4 px-4 px-md-5">
+
+                        <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                            <u>My Todo</u>
+                            <h6 class="text-center" id="loading" data-text="Silahkan isi To-do list anda dibawah ini">Silahkan isi To-do list anda dibawah ini</h6>
+                        </p>
+
+                        <div class="card pb-2">
+                            <div class="card-body">
+                                <div class="d-flex flex-row align-items-center">
+                                    <input type="text" class="form-control form-control-lg" id="add-todo" placeholder="Add new todo">
+                                    <button type="button" class="btn btn-primary" onclick="submitTodo()">Add</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div id="list-todo">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+   
+<!-- todo ############# here END  -->
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Order Information</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+           
+    
+                <!-- isi datanya  -->
+                <table class="table table-striped">
+                    <thead>
+                          <tr>
+                          <th class="bg-warning">Plan Fiture</th>
+                          <th class="bg-warning">Basic $5/month</th>
+                          <th class="bg-warning">Economy $9/month</th>
+                             
+                      </tr>
+                    </thead>
+                    <tbody id="list-todo">
+                          <td>Web Space</td>
+                          <td>Unlimited</td>
+                          <td>Unlimited</td>
+                    </tbody>
+                    <tbody id="list-todo">
+                          <td>Bandwidth</td>
+                          <td>Unlimited</td>
+                          <td>Unlimited</td>
+                    </tbody>
+                    <tbody id="list-todo">
+                          <td>25 GB Storage</td>
+                          <td>❌</td>
+                          <td>Unlimited</td>
+                    </tbody>
+                    <tbody>
+                          <td>iPhone App</td>
+                          <td>❌</td>
+                          <td>Unlimited</td>
+                    </tbody>
+                    <tbody>
+                          <td>Enhanced Security</td>
+                          <td>&check</td>
+                          <td>✔️</td>
+                    </tbody>
+                    <tbody>
+                      <td>E-mail</td>
+                          <td>✔️</td>
+                          <td>✔️</td>
+                    </tbody>
+                    <tbody>
+                          <td>Wordpress Support</td>
+                          <td>❌</td>
+                          <td>✔️</td>
+                      </tbody>
+                      <tbody>
+                           <td>24/7 Support</td>
+                          <td>✔️</td>
+                          <td>✔️</td>
+                      </tbody>
+                      <tbody>
+                          <td>Backups</td>
+                          <td>✔️</td>
+                          <td>✔️</td>
+                      </tbody>
+                      <tbody>
+                          <td>Dedicated IP</td>
+                          <td>$2/mo</td>
+                          <td>$2/mo</td>
+                      </tbody>
+                  </table>
+                  <h6 id="kode-promo">kode Promo : </h6>
+                <!-- end isi datanya  -->
+          </div>
+      </div>
+  </div>
+</div>
+          <!-- end modal  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/index2.js"></script>
+  </body>
+</html>
